@@ -1,0 +1,43 @@
+\chapter{Conclusiones y trabajo futuro}
+\section{Conclusiones}
+
+Tras el desarrollo de las distintas partes de este proyecto he podido darme cuenta de la potencia de las herramientas utilizadas en MEDA-Toolbox y de cómo la reducción del problema se hace de manera muy eficiente, ya que aunque es lógico que se pierda parte de información en el proceso la mayor parte de dicha pérdida es de datos redundantes cuya información ya se encuentra en el modelo.
+\bigskip
+
+También las técnicas de visualización vistas facilitan mucho la detección de anomalías pudiendo distinguir e identificar comportamientos irregulares dentro de los enormes conjuntos de datos, y no solo ver las relaciones entre las observaciones si no también entre las variables de cada observación, e incluso las relaciones dobles entre variables y observaciones.
+\bigskip
+
+Por otra parte el estudio de la seguridad me hace darme cuenta de la necesidad que hay en la sociedad actual de mecanismo de prevención de intrusiones, puesto que en los últimos 5 años he visto como la tecnología se incluía cada vez mas en todos los aspectos de nuestras vidas. 
+\bigskip
+
+Esta evolución exponencial que estamos viviendo tiene muchos aspectos positivos, ya que tareas que antes era necesario hacer desde un ordenador o de manera manual ya se puede hacer mediante dispositivos que caben en nuestro bolsillo o incluso que llevamos en nuestra muñeca. Pero no todo es positivo puesto que la mayoría de las personas no es consciente de la información que comparten o de lo inseguros que son los mecanismos que utilizan para según qué tareas. 
+\bigskip
+
+Todo esto me hace llegar a la conclusión que la investigación en seguridad de redes y de sistemas es cada vez mas necesaria, y que debe educarse a la gente en este aspecto para minimizar las fallas relacionadas con comportamientos inconscientes de los usuarios. 
+
+
+\section{Trabajo futuro}
+
+La interfaz gráfica desarrollada para este proyecto pasará a formar parte de la GUI de MEDA Toolbox tras ser adaptada, y como dicha Toolbox está en desarrollo aún se pueden integrar muchas funcionalidades y adaptaciones para distintos tipos de estudios. A continuación se van a dar una serie de mejoras para la aplicación desarrollada orientadas al estudio de la seguridad, y otras para la mejora de la GUI para cualquier tipo de estudio.
+
+\bigskip
+
+\subsection{Mejoras para la detección de anomalías}
+
+Como se ha comentado en capítulos anteriores las técnicas de detección utilizadas en MEDA se basan en conceptos estadísticos. Una forma de complementar dichos métodos podría ser añadiendo técnicas de inteligencia artificial que junto con las estadísticas pudieran llegar a conclusiones más completas. Un método metaheurístico utilizado para la detección de ataques en red son los algoritmos bioinspirados  basados en sistemas inmunológicos, que pueden ser programados para detectar cuándo cierto tráfico no forma parte del sistema o está fuera de los límites de lo que sería normal. Con esto se puede hacer un análisis paralelo al que hace MEDA para comprobar si las conclusiones son las mismas o son cercanas.
+
+\bigskip
+
+Orientado a la seguridad también, se podría crear una aplicación o utilizar alguna ya creada para el propósito de recolección de datos de seguridad de los ficheros de log, tanto de los dispositivos finales como de los enrutadores que interconectan las redes. Mediante otro programa automatizar el estudio de las anomalías haciendo así que el software trabajara de forma autónoma en la detección de fallos de seguridad, y cuando los parámetros no estuvieran dentro de lo normal enviase un aviso al administrador de la red para que pudiera hacer un estudio mas exhaustivo.
+
+\bigskip
+
+\subsection{Mejoras para MEDA Toolbox}
+
+Una posible mejora que se le podría hacer al software MEDA en general sería centralizar el cómputo tanto de la calibración del modelo, como del análisis y la visualización en un servidor que tuviera MATLAB y la Toolbox instaladas, y hacer una aplicación de escritorio o móvil que se conectara a dicho servidor mandando los datos necesarios para el análisis y recibiendo las salidas gráficas. Esto mejoraría el rendimiento de la aplicación y extendería más su uso, ya que no sería necesario tener instalado el entorno MATLAB ni la Toolbox.
+
+\bigskip
+
+Utilizando el servidor anterior también se podría generar una interfaz web para la consulta desde navegadores, lo que le daría mayor alcance ya que no sería necesario ni tan siquiera tener una aplicación local.
+
+

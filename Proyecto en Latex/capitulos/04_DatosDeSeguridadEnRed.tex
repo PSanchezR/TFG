@@ -1,0 +1,126 @@
+\chapter{Datos de seguridad en red}
+El presente capítulo esta basado en el capítulo 2 del libro de "Applied Security Visualization" de Raffael Marty en el que se habla de los orígenes de los datos de una red y cómo sacar información útil para el análisis de la seguridad.
+ 
+\bigskip
+
+\section{Terminología} \cite{ASV}
+Antes de comenzar hay que tener claros una serie de conceptos:
+\begin{itemize}
+\item \textbf{Evento(Event):}Situación observable o modificación del entorno que ocurre en un periodo de tiempo. Un evento puede ser un estado específico o un cambio de estado de un sistema.
+\item \textbf{Entrada de registro(Log entry):}Grabación única que incluye detalles sobre uno o mas eventos. Puede ser referida a un evento de registro,  una alerta, una alarma, un mensaje de registro, etc.
+\item \textbf{Registro(Log):}Colección de una o más entradas de registro normalmente escritas en un fichero local, una base de datos, o enviadas a través de la red a un servidor de registro.
+\end{itemize}
+\bigskip
+
+\section{Datos de seguridad}\cite{ASV}
+Los datos de seguridad son toda aquella información que pueda ayudarnos con el análisis de seguridad. Como pueden ser los registros de orígenes como dispositivos de red, transacciones de registros sistemas financieros, registros de DHCP, y cualquier información que pueda ayudarnos a resolver un problema de seguridad o responda a cualquier pregunta sobre la seguridad.
+\bigskip
+
+Se pueden separar en dos categorías: las series temporales y los datos estáticos.
+\bigskip
+
+\subsection{Series temporales}
+Son toda aquella información a la cual se le puede atribuir una marca temporal.Las entradas de registro entran dentro de esta categoría ya que cada uno tiene un “time stamp” o marca temporal asociada que no siempre identifica el momento en el que ocurrió el evento si no el momento en el que este se escribió en el fichero de registro.
+\bigskip
+
+\subsection{Datos estáticos}
+Son toda información que no tiene asociada una marca de tiempo. Dentro de éstos los que interesan en este caso son los relacionados con los usuarios, el entorno o el sistema. Uno de los retos de trabajar con este tipo de datos es el tamaño que puede llegar a tener. Además, mientras que un registro está estructurado, en cada línea hay una entrada que tiene una serie de atributos, en el caso de los ficheros estáticos el tamaño es cambiante, por esto hay que \textbf{“parsear”} estos ficheros para sacar la información que necesitemos.\textbf{Parsing} es el proceso mediante el cual se coge un fichero, se identifican las partes de interés y se extraen de manera estructurada hacia otro fichero que será el que se analice en su momento. Es típico también parsear los ficheros de registro aunque sigan estructuras mas homogéneas.
+
+\bigskip
+
+\section{Problemas comunes} \cite{ASV}
+Durante el análisis de los ficheros de registro y la visualización de los datos de seguridad surgen dos problemas con los que hay que tener especial cuidado en evitar o corregir. El primero y más importante es la información incompleta y el segundo es la confusión entre origen y destino.
+\bigskip
+
+\subsection{Información incompleta}
+Puede llegar a ser un problema de gran importancia para la visualización de los datos y para el análisis de registros. Se puede dividir en 4 niveles:
+
+\begin{itemize}
+\item Pérdida de ficheros de registros o metadatos.
+\item Pérdida de registros dentro de un fichero de registro.
+\item Registros incompletos.
+\item Tiempos no sincronizados.
+\end{itemize}
+
+\subsection{Confusión origen destino}
+Éste término acuñado por “Raffael Marty” representa el problema que surge cuando analizando tráfico de red vemos un diagrama de flujo en el que se muestran dos nodos con una conexión bidireccional llegándose a confundir desde donde se inicia la conexión y hacia donde se conecta. Dicho de forma mas sencilla este problema se da cuando se confunde el origen y el destino en un flujo de tráfico de red.
+\bigskip
+
+También se puede dar cuando se pierden paquetes de la captura en los que se inicia la conexión sin quedar claro cuál es el origen y el destino de la misma.
+\bigskip
+
+El problema que puede causar dicha confusión es que en la visualización los gráficos generados estén invertidos dando lugar a un análisis incorrecto de la situación.
+\bigskip
+
+\section{Orígenes de datos}\cite{ASV}
+
+Para que se pueda llevar a cabo un análisis es necesario obtener los datos del tráfico de una red mediante la captura de paquetes del mismo. Esto se hace con aplicaciones como “wireshark” que captura los paquetes que pasan por el controlador de la tarjeta de red hacia el sistema operativo, como estos paquetes provienen de la capa de red tienen información como las direcciones IP y los puertos de destino y origen del paquete, una marca de tiempo, el tamaño del paquete, direcciones físicas dentro de la red de área local, etc. En la mayoría de los casos la captura de paquetes de red se da desde los enrutadores, y mediante un re-envió de los mismo hacia dispositivos de captura se obtiene la información que posteriormente será parseada por el analista.
+\bigskip
+
+Por encima de la captura de paquetes podemos identificar los flujos de tráfico que pertenecen a la capa de transporte y nos dan información adicional a la dada en la captura de paquetes, como puede ser tipo de servicio de la conexión, interfaces de red, sistemas autónomos, siguiente salto de la conexión, número de bits y paquetes que han sido transportados hasta el momento por el flujo, etc.
+\bigskip
+
+Con toda esta información se pueden obtener tanto los puntos de origen y destino de la conexión, como los dispositivos intermedios por los que pasa, y mediante los puertos podemos saber qué aplicación es la que está generando el tráfico. Con esto se puede realizar un análisis completo de la situación y comparando con flujos de tráfico “normales” podemos descubrir anomalías en una red.
+\bigskip
+
+\section{Firewall}\cite{ASV}
+Los cortafuegos o firewalls trabajan en la capa de transporte. Algunas nuevas versiones trabajan además en la capa de aplicación inspeccionando las mismas o analizando los protocolos que utilizan. Los firewalls operan con los flujos de tráfico bloqueándolos o permitiéndolos según unas reglas preestablecidas por el administrador, y registrando cada uno de los eventos que se produzcan. Las entradas que almacenan en los logs tienen una estructura similar a la de los flujos de tráfico, teniendo marca temporal, direcciones IP, puertos de conexión, etc. Además también tienen una regla y una acción que se producirá según esa regla.
+\bigskip
+
+\section{Sistemas de detección y prevención de intrusiones}\cite{ASV}
+Sistemas de detección y prevención de intrusiones
+Las infraestructuras y sistemas informatizados en su mayoría utilizan, a parte de los filtros de tráfico, sistemas de detección y/o prevención de intrusiones, a partir de ahora IDS.
+\bigskip
+
+Los IDS pueden ser de dos tipos, basados en host (HIDS) o basados en red (NIDS). Los HIDS trabajan directamente sobre la máquina final, mientras que los NIDS lo hacen sobre los routers o proxys.
+\bigskip
+
+HIDS monitorean el comportamiento de los procesos ejecutados en el sistema, las actividades de los usuarios y la actividad de la red desde la perspectiva del equipo en el cual se montan.
+\bigskip
+
+NIDS escanean la red para detectar violaciones en los parámetros de seguridad que se le configuren (basados en anomalías), o buscando rastros conocidos de ataques (basados en firmas). Los NIPS son una extensión de los NIDS que aparte de detectar las anomalías pueden bloquearlas previniendo así que se produzcan las violaciones a la seguridad.
+\bigskip
+
+Este tipo de sistemas tienen un importante problema que es la generación de falsos positivos que se puede mitigar creando listas negras con valores de falsos positivos conocidos para evitarlos en los análisis o priorizando eventos, lo que puede ser una ardua tarea.
+\bigskip
+
+\section{Análisis de red pasivos}\cite{ASV}
+Este tipo de herramientas escanean la red sacando información de los dispositivos que tiene la misma. Esta información va desde las direcciones IP, los sistemas operativos de cada una de ellas, la distancia en dispositivos intermedios que hay desde la máquina que esta analizando hasta cada uno de los dispositivos y el tipo de enlace que la máquina utiliza para conectarse a la red.
+\bigskip
+
+Toda esta información se utiliza para hacer un análisis posterior del funcionamiento de la red y detectar ataques así como predecir posibles fallos en la seguridad.
+\bigskip
+
+\section{Sistemas Operativos}\cite{ASV}
+Los sistemas operativos almacenan toda la actividad que se ejecuta en distintos ficheros de registro que se pueden utilizar para hacer análisis de información no basados en red.
+\bigskip
+
+La información que se almacena en los registros es muy variada, registro de actividad de aplicaciones, de red (lo relacionado con los host finales), eventos de núcleo del sistema operativo, estado del mismo, etc.
+\bigskip
+
+La información generada por el sistema operativo en tiempo real maneja la auditoría de ficheros, los reinicios y desconexiones del mismo, los errores en los recursos (memoria, disco, etc.) y las acciones ejecutadas por los distintos usuarios.
+\bigskip
+
+La información de estado del sistema almacena eventos relacionados con el estado de la red, entradas/salidas, memoria y procesos.
+\bigskip
+
+Los registros de problemas del sistema operativo almacenan eventos producidos por errores o fallos en el funcionamiento normal. Este tipo de registros suelen estar estructurados de manera irregular en los ficheros ya que la naturaleza de los errores puede ser muy distinta y la respuesta del sistema ante ellos también lo puede ser.
+\bigskip
+
+Algunas aplicaciones también pueden tener un registro de actividad que puede ser de ayuda para el análisis.
+\bigskip
+
+Los proxys de red, servidores de correo y servidores de bases de datos también poseen registros que controlan la actividad que se desarrolla en los mismos que puede ser de utilidad para añadirla a toda la información anterior.
+\bigskip
+
+\section{Test de pentración}\cite{PCK} \cite{MPP}
+Hasta este punto se ha tratado de mostrar como a partir de los datos de la red y de los sistemas finales, recolectando información se puede reconocer si ha habido o no un ataque, en este apartado se comentaran los test de penetración. Estos test nos dan la oportunidad de prever posibles ataques analizando la información de configuración del sistema y buscando fallos en la seguridad.
+\bigskip
+
+El proceso de recolección de información de un test de penetración tiene varias fases que comienzan por el “footprinting”, que consiste en buscar cualquier tipo de información pública de la red o sistema, ya haya sido publicada expresamente o por desconocimiento de la organización, en este punto se buscan direcciones IP, cuentas de usuarios, de correo, nombres de los host finales y cualquier dispositivo con acceso a la red y que pueda ser susceptible de ataque.
+\bigskip
+
+El “fingerprinting” es un proceso similar al comentado en otros apartados, que consiste en buscar el rastro que dejan los dispositivos finales, ya sea el software que manejan, puertos de conexión, etc. Esto se puede hacer de forma activa o pasiva. La forma activa se basa en lanzar a la red ciertos flujos de datos con un destino concreto y ver cómo reacciona la máquina ante ellos, esto nos muestra si tiene cierta aplicación activa o si es vulnerable a ataques por cierto puerto. La manera pasiva es escanear la red en busca de esos flujos y analizarlos para detectar las aplicaciones y los puertos.
+\bigskip
+
+Para esta parte del proceso de “pentesting” es muy útil SNMP de las siglas en inglés “simple network managment protocol” o protocolo simple de administración de red. Este protocolo nos brinda la posibilidad de intercambiar información con las máquinas conectadas a la red de manera sencilla y centralizada, sin la necesidad de hacer un escaneo del tráfico. SNMP permite monitorizar todas las funciones de la red, resolver problemas en la misma y gestionar la escalabilidad.

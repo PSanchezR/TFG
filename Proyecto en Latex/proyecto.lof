@@ -1,0 +1,82 @@
+\select@language {spanish}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Descripci\IeC {\'o}n gr\IeC {\'a}fica de componente principal.}}{7}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Ejemplo de gr\IeC {\'a}fico MEDA.}}{10}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Ejemplo de oMEDA.}}{11}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de Score Plot.}}{12}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Ejemplo de Loading Plot.}}{13}{figure.2.5}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Ejemplo de score plot con BIG DATA.}}{16}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Score plot en iterative y PLS.}}{20}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces MEDA en iterative y PLS.}}{20}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces oMEDA en iterative y PLS}}{21}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Score plot en EWMA y PCA}}{22}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces MEDA en EWMA y PCA}}{22}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces oMEDA en EWMA y PCA}}{23}{figure.3.7}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Temporizaci\IeC {\'o}n en GanttProject.}}{33}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Gr\IeC {\'a}fico de la temporizaci\IeC {\'o}n.}}{34}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Gr\IeC {\'a}fico costes herramientas.}}{36}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Gr\IeC {\'a}fico presupuesto total.}}{37}{figure.5.4}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Ventana incio GUIDE.}}{40}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces GUIDE Blank GUI}}{40}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Property Inspector.}}{42}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Ejemplo de GUI, vista en GUIDE.}}{44}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Ejemplo GUI, vista en ejecuci\IeC {\'o}n.}}{45}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Ejemplo GUI, vista tras pulsar el bot\IeC {\'o}n.}}{45}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces C\IeC {\'o}digo del callback.}}{46}{figure.6.7}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Diagrama de casos de uso An\IeC {\'a}lisis-Calibraci\IeC {\'o}n.}}{57}{figure.7.1}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Diagrama de casos de uso Visualizaci\IeC {\'o}n.}}{58}{figure.7.2}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Diagrama de paquetes.}}{59}{figure.7.3}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Diagrama de actividad CU-3.}}{60}{figure.7.4}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Diagrama de actividad CU-4.}}{61}{figure.7.5}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Diagrama de actividad CU-5.}}{62}{figure.7.6}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Diagrama de actividad CU-6.}}{63}{figure.7.7}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Diagrama de actividad CU-7.}}{64}{figure.7.8}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Prototipo de la GUI.}}{67}{figure.8.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {9.1}{\ignorespaces GUI final.}}{69}{figure.9.1}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Ruta a los datos.}}{70}{figure.9.2}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Calibraci\IeC {\'o}n del modelo.}}{70}{figure.9.3}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Visualizaci\IeC {\'o}n.}}{71}{figure.9.4}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {10.1}{\ignorespaces GUI para un solo modelo.}}{73}{figure.10.1}
+\contentsline {figure}{\numberline {10.2}{\ignorespaces Score plot un modelo.}}{74}{figure.10.2}
+\contentsline {figure}{\numberline {10.3}{\ignorespaces MEDA un modelo.}}{74}{figure.10.3}
+\contentsline {figure}{\numberline {10.4}{\ignorespaces MEDA un modelo con zoom.}}{75}{figure.10.4}
+\contentsline {figure}{\numberline {10.5}{\ignorespaces Observaciones marcadas para oMEDA.}}{76}{figure.10.5}
+\contentsline {figure}{\numberline {10.6}{\ignorespaces oMEDA de los outliers.}}{77}{figure.10.6}
+\contentsline {figure}{\numberline {10.7}{\ignorespaces Score Plots entre modelos 1 y 9.}}{79}{figure.10.7}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Modelo 1}}}{79}{figure.10.7}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Modelo 2}}}{79}{figure.10.7}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Modelo 3}}}{79}{figure.10.7}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Modelo 4}}}{79}{figure.10.7}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Modelo 5}}}{79}{figure.10.7}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Modelo 6}}}{79}{figure.10.7}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {Modelo 7}}}{79}{figure.10.7}
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {Modelo 8}}}{79}{figure.10.7}
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {Modelo 9}}}{79}{figure.10.7}
+\contentsline {figure}{\numberline {10.8}{\ignorespaces oMEDA entre modelos 5 y 8 sobre la observarci\IeC {\'o}n 14.}}{80}{figure.10.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Modelo 5}}}{80}{figure.10.8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Modelo 6}}}{80}{figure.10.8}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Modelo 7}}}{80}{figure.10.8}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Modelo 8}}}{80}{figure.10.8}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces MEDA-Toolbox BIG DATA GUI.}}{90}{figure.Alph1.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Interfaz de selecci\IeC {\'o}n de ficheros.}}{90}{figure.Alph1.2}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Interfaz con salidas del an\IeC {\'a}lisis.}}{91}{figure.Alph1.3}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Score Plot del ejemplo.}}{92}{figure.Alph1.4}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces MEDA del ejemplo.}}{92}{figure.Alph1.5}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Selecci\IeC {\'o}n de puntos en un ScorePlot.}}{93}{figure.Alph1.6}
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Gr\IeC {\'a}fico oMEDA del ejemplo.}}{93}{figure.Alph1.7}
+\contentsline {figure}{\numberline {A.8}{\ignorespaces Mensaje de error de fichero.}}{94}{figure.Alph1.8}
+\contentsline {figure}{\numberline {A.9}{\ignorespaces Mensaje de error de campo sin rellenar.}}{94}{figure.Alph1.9}
+\contentsline {figure}{\numberline {A.10}{\ignorespaces Ejemplo mensaje de error PCs iguales.}}{95}{figure.Alph1.10}
+\contentsline {figure}{\numberline {A.11}{\ignorespaces Matlab no reconoce la GUI.}}{95}{figure.Alph1.11}
+\contentsline {figure}{\numberline {A.12}{\ignorespaces Mensaje de inicio de GUI.}}{95}{figure.Alph1.12}

@@ -1,0 +1,65 @@
+\chapter{Introducción}
+
+En el presente trabajo se va a exponer el desarrollo de una interfaz gráfica de usuario para una herramienta de análisis de datos y tratamiento de Big Data para la detección de anomalías en tráfico de red.
+\bigskip
+
+\section{Contexto histórico de la seguridad}  
+
+\cite{CHS} \cite{ISS} Históricamente el primer ataque contra la seguridad informática se produjo en 1972 por Robert Thomas Morris quien creó el primer virus reconocido como tal cuyo nombre era \textbf{Creeper}, un software bastante sencillo que sólo mostraba regularmente un mensaje por pantalla \textbf{I am a creep, catch me if you can} y se movía a otros sistemas a los que estuviera conectado, en ese momento no se pretendía llegar a colapsar sistemas o capturar información confidencial. En contramedida a este “virus” se creó \textbf{Reaper} que técnicamente era otro virus que también se movía entre máquinas pero con la finalidad de eliminar al anterior.
+\bigskip
+
+\cite{PVI}El primer virus con mecanismos de propagación reales llegó en 1983 de la mano de Fred Cohen que desarrolló como experimento un software que modificaba otros programas para insertar su código en ellos y que éstos a su vez hicieran lo mismo construyendo así el primer gusano de la historia.
+\bigskip
+
+Tras esto los virus fueron evolucionando hasta llegar el primer polimórfico  en 1990 llamado \textbf{“Dark avenger mutation engine”} que cambiaba de forma en cada infección para dificultar su identificación.
+\bigskip
+
+En 1989 se creó \textbf{“Stoned”} un virus que infectaba el sector de arranque del disco duro contando el número de reinicios y mostrando un mensaje, no tuvo mayor repercusión hasta que en 1992 se crea \textbf{“Michelangelo”} una variante de él que infectaba los 100 primeros sectores del disco inutilizándolo, este fue el primero virus que inició el pánico mediático entorno a la informática.
+\bigskip
+
+A partir de este momento se fueron creando antivirus más completos, puesto que hasta finales de los 80 sólo se creaban programas como respuesta a los virus concretos pero no globales. No sólo buscaban programas en particular si no que escaneaban en busca de comportamientos anómalos o inapropiados.
+\bigskip
+
+\cite{CIH} En 1998 apareció \textbf{“CIH”}, el virus  más destructivo hasta el momento infectando más de 60 millones de máquinas e inutilizándolas puesto que sobrescribía la BIOS impidiendo el arranque de las mismas, produjo grandes daños económicos.
+\bigskip
+
+Hasta este punto los ataques se basaban en virus  que infectaban, se replicaban y cambiaban de forma siguiendo unos patrones y que básicamente interrumpían el funcionamiento normal de las máquinas, pero a partir del año 2000 comenzaron a implementarse nuevas técnicas de ataque. Técnicas utilizadas para acceder a los sistemas y tomar control de ellos como pueden ser los \textbf{ataques de autenticación}, bloquear servicios que ofrezcan con \textbf{denegación de servicio (DoS)}, robar información de los usuarios de una red con \textbf{ataques de monitorización}, aprovechando la “credulidad” o falta de conocimiento de los usuarios para robarles información con \textbf{ingeniería social}  o \textbf{ataques de modificación}  para cambiar transmisiones de datos, configuraciones de usuario o borrar las huellas de un ataque.
+\bigskip
+
+En la actualidad vivimos en una sociedad interconectada por multitud de dispositivos que comparten información de naturaleza muy diferente entre las que se encuentran datos sensibles de los usuarios, dichos datos circulan por la red dependiendo en muchos casos de la seguridad de la misma (aunque pueden venir previamente cifrados o protegidos).
+\bigskip
+
+Actualmente las redes son atacadas constantemente con el fin de obtener beneficio económico, suplantar identidades, captación de información confidencial, etc. 
+
+\bigskip 
+
+\section{Motivación}
+
+El presente documento viene motivado por la necesidad que existe de detectar ataques a la seguridad en tiempo real y poder actuar en consecuencia evitando males mayores. Puesto que el problema a tratar va aumentando constantemente debido al crecimiento de las redes de dispositivos (sobre todo móviles) se deben crear mecanismos que permitan llevar a cabo esta tarea de forma automatizada y relativamente sencilla.
+\bigskip
+
+Por ello la motivación de este trabajo es el desarrollo de una herramienta para la detección de fallas en la seguridad así como de los elementos de la red que producen estos problemas incluyendo a los usuarios que manejan dichos dispositivos. Para poder llevar a cabo esto se necesitan técnicas que permitan identificar dentro de un conjunto enorme de datos cuál o cuáles son anomalías y analizarlas para encontrar las causas.
+
+\section{Objetivos}
+
+Se pretende con este proyecto llevar a cabo una interfaz gráfica de usuario que permita simplificar el análisis y diagnóstico de los ataques en un entorno de grandes conjuntos de datos como puede ser una red móvil, una red corporativa, etc. 
+\bigskip
+
+Para llevar a cabo todo esto se va a utilizar como base del desarrollo la “MEDA-Toolbox” desarrollada por el tutor del presente proyecto José Camacho Páez, en la que también han contribuido Elena Jiménez Mañas, Alejandro Pérez Villegas y Rafael Rodríguez Gómez.
+\bigskip
+
+A grandes rasgos los objetivos a cumplir son:
+
+\begin{itemize}
+	\item \textbf{OBJ-1:}Estudiar y realizar una introducción teórica de las técnicas estadísticas que utiliza el Análisis Exploratorio de Datos y del análisis de grandes conjuntos de datos.
+	
+	\item \textbf{OBJ-2:}Tratar el tema de la extracción de datos en red para el estudio de la seguridad.
+	
+	\item \textbf{OBJ-3:}Análizar, diseñas y desarrollar una interfaz gráfica de manejo sencillo para la utilización de la “MEDA-Toolbox”.
+	
+	\item \textbf{OBJ-4:}Demostrar la funcionalidad del software mediante un ejemplo con datos reales de una red corporativa.
+	
+\end{itemize}
+\bigskip
+
+En los siguientes capítulos se tratará en detalle las técnicas estadísticas a utilizar (tema 2), las herramientas para el análisis de Big Data (tema 3), Los datos de seguridad en red necesarios para llevar a cabo el estudio (tema 4), la planificación y estimación de costes (tema 5), una descripción de cómo  utilizar la GUIDE de Matlab (tema 6), el proceso de análisis, diseño y desarrollo de la interfaz (temas 7, 8 y 9), un ejemplo de uso del sistema desarrollado con datos reales (tema 10) y por último las conclusiones y el trabajo futuro (tema 11).
