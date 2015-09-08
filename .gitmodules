@@ -1,0 +1,6 @@
+[submodule "https:/github.com/PSanchezR/TFG"]
+	path = https:/github.com/PSanchezR/TFG
+	url = git://github.com/PSanchezR/MEDA-Toolbox
+[submodule "MEDA-Toolbox"]
+	path = MEDA-Toolbox
+	url = git://github.com/PSanchezR/MEDA-Toolbox
